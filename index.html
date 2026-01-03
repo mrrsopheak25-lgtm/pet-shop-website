@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pet Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">🐾 Pet Shop</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#history">History</a>
+        <a href="#reels">Reels</a>
+        <a href="#pets">Pets</a>
+        <a href="#payment">Payment</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="home">
+      <img src="pic/bg-page.png" class="home-bg" />
+      <div class="home-content">
+        <h1>A New Home for Petland Lovers 🐶</h1>
+        <p>Choose your favorite pet and pay securely</p>
+        <a href="#pets" class="btn">View Pets</a>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="pet-history">
+      <div class="history-head">
+        <h2>Pet History</h2>
+        <p>Click image to view biography</p>
+      </div>
+
+      <div class="history-wrap">
+        <!-- IMAGES -->
+        <div class="history-images">
+          <img
+            src="pic/his-siberian-husky.png"
+            data-target="husky"
+            class="active"
+          />
+          <img src="pic/his-golden-retriever.png" data-target="golden" />
+          <img src="pic/his-pug.png" data-target="pug" />
+          <img src="pic/his-bulldog.png" data-target="bulldog" />
+        </div>
+
+        <!-- TEXT -->
+        <div class="history-text">
+          <div class="history-item active" id="husky">
+            <h3>Husky</h3>
+            <p>
+              The Remarkable History of Huskies as Working Dogs - Otto
+              ...Siberian Husky history begins over 4,000 years ago with the
+              Chukchi people of Siberia, who developed the breed as resilient
+              sled dogs for transportation and companionship in harsh Arctic
+              conditions, capable of pulling light loads long distances.
+            </p>
+          </div>
+
+          <div class="history-item" id="golden">
+            <h3>Golden Retriever</h3>
+            <p>
+              The Golden Retriever is a popular medium-large dog breed known for
+              its gentle nature, intelligence, and beautiful golden coat, making
+              it an excellent family companion and versatile working dog.
+            </p>
+          </div>
+
+          <div class="history-item" id="pug">
+            <h3>Pug</h3>
+            <p>
+              Pugs originated in ancient China over 2,000 years ago as cherished
+              companions for emperors and nobility, valued for luck and luxury,
+              evolving from "lion dogs" to lapdogs, then spreading to Europe via
+              Dutch traders where they became favorites of royalty like Queen
+              Victoria and Napoleon's wife Josephine, later gaining AKC
+              recognition in the US in 1885.
+            </p>
+          </div>
+
+          <div class="history-item" id="bulldog">
+            <h3>Bulldog</h3>
+            <p>
+              The Bulldog, often called the English or British Bulldog, is a
+              medium-sized breed recognized for its "sourmug" face and stocky,
+              low-slung build. Originally a fierce athlete in blood sports,
+              modern Bulldogs have been bred to be gentle, courageous
+              companions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REELS -->
+    <section id="reels" class="reels">
+      <h2>Pet Reels</h2>
+
+      <div class="reel-row">
+        <div class="reel active">
+          <video src="video/1.mp4" muted loop autoplay playsinline></video>
+        </div>
+
+        <div class="reel">
+          <video src="video/2.mp4" muted loop autoplay playsinline></video>
+        </div>
+
+        <div class="reel">
+          <video src="video/3.mp4" muted loop autoplay playsinline></video>
+        </div>
+
+        <div class="reel">
+          <video src="video/4.mp4" muted loop autoplay playsinline></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="pets" class="pets">
+      <h2>Pets for Sale</h2>
+      <div class="pets-row">
+        <div
+          class="pet-card"
+          data-name="Husky"
+          data-price="1200"
+          data-img="pic/siberian-husky.png"
+        >
+          <img src="pic/siberian-husky.png" />
+          <h3>Husky</h3>
+          <button class="price">$1200</button>
+        </div>
+
+        <div
+          class="pet-card"
+          data-name="Golden"
+          data-price="900"
+          data-img="pic/golden-retriever.png"
+        >
+          <img src="pic/golden-retriever.png" />
+          <h3>Golden</h3>
+          <button class="price">$900</button>
+        </div>
+
+        <div
+          class="pet-card"
+          data-name="Pug"
+          data-price="750"
+          data-img="pic/pug.png"
+        >
+          <img src="pic/pug.png" />
+          <h3>Pug</h3>
+          <button class="price">$750</button>
+        </div>
+
+        <div
+          class="pet-card"
+          data-name="Bulldog"
+          data-price="850"
+          data-img="pic/bulldog.png"
+        >
+          <img src="pic/bulldog.png" />
+          <h3>Bulldog</h3>
+          <button class="price">$850</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT -->
+    <section id="payment" class="checkout">
+      <h2 class="checkout-title">🧾 Order & Payment</h2>
+
+      <div class="checkout-box">
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="order-item">
+            <img id="orderImg" src="pic/pug.png" />
+            <div>
+              <p id="petName">Pug</p>
+              <span class="pet-price">$<span id="totalPrice">750</span></span>
+            </div>
+          </div>
+
+          <div class="order-total">
+            <span>Total</span>
+            <b>$<span id="totalPrice2">750</span></b>
+          </div>
+        </div>
+
+        <div class="payment-form">
+          <h3>Payment Method</h3>
+
+          <div class="methods">
+            <div class="method active"><img src="pic/visa.png" /></div>
+            <div class="method"><img src="pic/master.png" /></div>
+          </div>
+
+          <input placeholder="Cardholder Name" />
+          <input placeholder="Card Number" />
+
+          <div class="row">
+            <input placeholder="MM / YY" />
+            <input placeholder="CVC" />
+          </div>
+
+          <button id="payNow">Confirm & Pay</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2 class="contact-title">📞 Contact Us</h2>
+      <p class="contact-sub">
+        Feel free to reach out for inquiries, orders, or support.
+      </p>
+
+      <div class="contact-wrapper">
+        <!-- LEFT INFO -->
+        <div class="contact-info">
+          <h3>🐾 Pet Shop</h3>
+          <p>📍 Phnom Penh, Cambodia</p>
+          <p>📞 +855 12 345 678</p>
+          <p>✉️ petshop@email.com</p>
+
+          <div class="social">
+            <span>🌐 Facebook</span>
+            <span>📸 Instagram</span>
+            <span>💬 Telegram</span>
+          </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <form class="contact-form">
+          <input id="cName" type="text" placeholder="Your Name" />
+          <input id="cEmail" type="email" placeholder="Email Address" />
+          <textarea id="cMsg" placeholder="Your Message"></textarea>
+          <button type="button" id="sendMsg">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
